@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Prova WEB</title>
+
+
+<script >
+function validar(){
+	
+	let quantidade = formTransacao.quantidade.value
+	if(quantidade === ""){
+		alert('preencha o campo do valor')
+		formTransacao.quantidade.focus()
+		
+		return false
+	}else{
+		document.forms['formTransacao'].submit()
+	}
+}
+</script>
+
+
+</head>
+<body>
+<h2>Bem vindo a funcao de realizar uma nova transacao</h2>
+
+<h1> realizar novo Saque </h1>
+<form name="formTransacao" action="resgatar">
+	<table>
+	<tr> 
+	
+	<td> <input type="text" name="quantidade" placeholder="quantidade">  </td>
+	
+	<td> <input type="text" name="descricao" placeholder="descreva">  </td>
+	
+	</tr>
+	
+	
+	</table>
+	
+	<input type="button" value ="Retirar da conta" onclick="validar()">
+	
+</form>
+
+
+
+</body>
+</html>
